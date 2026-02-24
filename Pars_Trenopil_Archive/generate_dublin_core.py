@@ -25,6 +25,7 @@ for line in lines:
     ET.SubElement(record, "dc:source").text = "https://archives.te.gov.ua"
 
 tree = ET.ElementTree(root)
+ET.indent(tree, space="  ", level=0)
 tree.write("dublin_core.xml", encoding="utf-8", xml_declaration=True)
 
 print("Dublin Core файл створено успішно")
